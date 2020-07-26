@@ -80,6 +80,11 @@ If you find errors in the code, or better way to explain or do things, feel free
 | [3D Game engine programming](https://www.3dgep.com/)    | [Robert Grigg](https://www.3dgep.com/author/grigg-rbuas-nl/) | Various articles related to DirectX |
 | [The Ryg blog](https://fgiesen.wordpress.com/) | [Fabian Giesen](https://twitter.com/rygorous) | In depth articles about GPU structures. Known for his [Trip trough the graphic pipeline series](https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/) |
 | [Adrian Courrèges blog](http://www.adriancourreges.com/blog/) | Adrian Courrèges | Well known for his [Graphics Study](http://www.adriancourreges.com/) series of AAA games. |
+| [Alain Gavan blog](https://alain.xyz/blog) | Alain Gavan | Different articles on graphic programming |
+| [Humus Name](http://www.humus.name/) | [Emil Persson](https://twitter.com/_humus_?lang=fr) | Blog of a Senior Graphics Engineer at Epic Games |
+| [Repi blog](http://repi.blogspot.com/) | [Johan Andersson](https://twitter.com/repi) | Graphics programmer at Dice |
+| [Mirror2Mask](https://twitter.com/mirror2mask) | Natalya Tatarchuk | Lead and engineering architect at Bungie |
+| [ID software tiago](https://twitter.com/idsoftwaretiago) | [Tiago Sousa](https://www.linkedin.com/in/tsousa/) | Lead rendering programmer at ID Software |
 
 ### Videos
 
@@ -87,7 +92,16 @@ If you find errors in the code, or better way to explain or do things, feel free
 | --- | --- | --- |
 | [SketchPunkLabs - Learn WebGL](https://www.youtube.com/channel/UCSnyjB_8iVxi2ZAfn_1L6tA) | -      | Various tutorials on rendering techniques with WebGL     |
 | [GDC Vault](https://www.gdcvault.com/free)                   | -      | Many conferences from professionals in the game industry |
-| [The Cherno](https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw) | -      | Various videos on programming and graphics programming   |
+| [The Cherno](https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw) | -      | Various videos on programming and graphics programming with content on OpenGL |
+| [ChiliTomatoNoodle](https://www.youtube.com/user/ChiliTomatoNoodle) | - | Various videos on programming and graphics programming with content on DirectX |
+
+### Repositories
+
+| Name                                                         | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Sacha Willem's Vulkan](https://github.com/SaschaWillems/Vulkan) | Various rendering techniques with the Vulkan API             |
+| [DirectX graphics samples](https://github.com/microsoft/DirectX-Graphics-Samples) | Microsoft official repository for code samples in DirectX 12 |
+| [Vulkan Samples](https://github.com/KhronosGroup/Vulkan-Samples) | Khronos official repository for code samples in Vulkan       |
 
 ### Books
 
