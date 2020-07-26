@@ -78,6 +78,8 @@ If you find errors in the code, or better way to explain or do things, feel free
 | [Wicked Engine Dev Blog](https://wickedengine.net/)     | János Turánszki                                              | Dev blog of his game engine         |
 | [Our Machinery Dev Blog](https://ourmachinery.com/post) | -                                                            | Dev blog of their game engine       |
 | [3D Game engine programming](https://www.3dgep.com/)    | [Robert Grigg](https://www.3dgep.com/author/grigg-rbuas-nl/) | Various articles related to DirectX |
+| [The Ryg blog](https://fgiesen.wordpress.com/) | [Fabian Giesen](https://twitter.com/rygorous) | In depth articles about GPU structures. Known for his [Trip trough the graphic pipeline series](https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/) |
+| [Adrian Courrèges blog](http://www.adriancourreges.com/blog/) | Adrian Courrèges | Well known for his [Graphics Study](http://www.adriancourreges.com/) series of AAA games. |
 
 ### Videos
 
@@ -91,12 +93,12 @@ If you find errors in the code, or better way to explain or do things, feel free
 
 | Name                                                         | Description                                                  | Illustration |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
-| [Game Engine Architecture](https://www.gameenginebook.com/)  | A famous book by Jason Gregory, a Naughty Dog engineer       |              |
-| [Real Time Rendering](http://www.realtimerendering.com/book.html) | Famous book on rendering techniques                          |              |
-| [Game Programming Gems Serie](http://www.satori.org/game-programming-gems/) | Mark DeLoura compilation of articles by other developers     |              |
-| [GPU Gems Serie](https://developer.nvidia.com/gpugems/gpugems/contributors) | Compilation of various articles by developers                |              |
-| [GPU Pro Serie](http://gpupro.blogspot.com/)                 | [Wolfgang Engel](http://www.blogger.com/profile/11031097395025597662) compilation of articles by other developers |              |
-| [Game Engine Gems Serie](http://www.gameenginegems.net/)     | Compilation of articles by developers                        |              |
-| [Fundamentals of Computer Graphics](https://www.oreilly.com/library/view/fundamentals-of-computer/9781482229417/) | A broad book explaining computer graphics from scratch       |              |
-| [Physically Based Rendering](http://www.pbr-book.org/)       | Matt Pharr, Wenzel Jakob, and Greg Humphreys revolutionary book on materials |              |
+| [Game Engine Architecture](https://www.gameenginebook.com/)  | A famous book by Jason Gregory, a Naughty Dog engineer       | <img width="80" src="https://www.amazon.fr/images/I/41Hz1rTfm4L._SX260_.jpg">            |
+| [Real Time Rendering](http://www.realtimerendering.com/book.html) | Famous book on rendering techniques                          | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/81E9-e9Ek+L.jpg">             |
+| [Game Programming Gems Series](http://www.satori.org/game-programming-gems/) | Mark DeLoura compilation of articles by other developers     | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/51fQmX6uduL._SX393_BO1,204,203,200_.jpg">             |
+| [GPU Gems Series](https://developer.nvidia.com/gpugems/gpugems/contributors) | Compilation of various articles by developers                | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/51E+10GRNIL.jpg">             |
+| [GPU Pro Series](http://gpupro.blogspot.com/)                 | [Wolfgang Engel](http://www.blogger.com/profile/11031097395025597662) compilation of articles by other developers | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/517N2anDNWL._SX384_BO1,204,203,200_.jpg">             |
+| [Game Engine Gems Series](http://www.gameenginegems.net/)     | Compilation of articles by developers                        | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/61ojDIZkewL._SX403_BO1,204,203,200_.jpg">             |
+| [Fundamentals of Computer Graphics](https://www.oreilly.com/library/view/fundamentals-of-computer/9781482229417/) | A broad book explaining computer graphics from scratch       | <img width="80" src="https://images-na.ssl-images-amazon.com/images/I/51WAZ4sIG3L._SY291_BO1,204,203,200_QL40_ML2_.jpg">             |
+| [Physically Based Rendering](http://www.pbr-book.org/)       | Matt Pharr, Wenzel Jakob, and Greg Humphreys revolutionary book on materials | <img width="80" src="https://www.pbrt.org/images/bookcover.png">             |
 
