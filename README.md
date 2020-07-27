@@ -9,10 +9,24 @@ Explanation and examples of modern rendering techniques commonly used for game e
 
 *(🏗️ : Not started | 📝 : Started | 📑 : Needs proofreading | ✔️ : Written )*
 
-* Todo
+* Animation
   * [Skinning 🏗️]()
-* Todo
+* Shading models
+  * [Toon 🏗️]()
+  * [Cook Torrance 🏗️]()
+* Pipeline
   * [Deferred Rendering 🏗️]()
+  * [Forward plus rendering 🏗️]()
+* Optimisation
+  * [Frustrum culling 🏗️]()
+  * [Tesselation 🏗️]()
+* Post Processing
+  * [Motion Blur 🏗️]()
+  * [Bloom 🏗️]()
+  * [Depth of field 🏗️]()
+* Shadows
+  * [Shadow Mapping 🏗️]()
+  * [Screen space ambiant occlusion 🏗️]()
 
 </p>
 </details>
