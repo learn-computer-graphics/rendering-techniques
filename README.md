@@ -14,16 +14,24 @@ Explanation and examples of modern rendering techniques commonly used for game e
 * Shading models
   * [Toon 🏗️]()
   * [Cook Torrance 🏗️]()
+* Lighting
+  * [Light Grid 🏗️]()
+  * [Volumetric Fog 🏗️]()
+  * [Screen Space Reflections 🏗️]()
 * Pipeline
   * [Deferred Rendering 🏗️]()
+  * [Tiled Deferred Rendering 🏗️]()
   * [Forward plus rendering 🏗️]()
+  * [Clustered shading 🏗️]()
 * Optimisation
   * [Frustrum culling 🏗️]()
   * [Tesselation 🏗️]()
+  * [Hardware Occlusion Queries 🏗️]()
 * Post Processing
   * [Motion Blur 🏗️]()
   * [Bloom 🏗️]()
   * [Depth of field 🏗️]()
+  * [Temporal Anti-Aliasing 🏗️]()
 * Shadows
   * [Shadow Mapping 🏗️]()
   * [Screen space ambiant occlusion 🏗️]()
@@ -99,6 +107,7 @@ If you find errors in the code, or better way to explain or do things, feel free
 | [Repi blog](http://repi.blogspot.com/) | [Johan Andersson](https://twitter.com/repi) | Graphics programmer at Dice |
 | [Mirror2Mask](https://twitter.com/mirror2mask) | Natalya Tatarchuk | Lead and engineering architect at Bungie |
 | [ID software tiago](https://twitter.com/idsoftwaretiago) | [Tiago Sousa](https://www.linkedin.com/in/tsousa/) | Lead rendering programmer at ID Software |
+| [PataBlog](https://patapom.com/blog/) | [Anoop Ravi Thomas](https://twitter.com/createthematrix) | Senior Graphics Programmer at Rockstar San Diego |
 
 ### Videos
 
@@ -109,13 +118,14 @@ If you find errors in the code, or better way to explain or do things, feel free
 | [The Cherno](https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw) | -      | Various videos on programming and graphics programming with content on OpenGL |
 | [ChiliTomatoNoodle](https://www.youtube.com/user/ChiliTomatoNoodle) | - | Various videos on programming and graphics programming with content on DirectX |
 
-### Repositories
+### Code samples
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Sacha Willem's Vulkan](https://github.com/SaschaWillems/Vulkan) | Various rendering techniques with the Vulkan API             |
 | [DirectX graphics samples](https://github.com/microsoft/DirectX-Graphics-Samples) | Microsoft official repository for code samples in DirectX 12 |
 | [Vulkan Samples](https://github.com/KhronosGroup/Vulkan-Samples) | Khronos official repository for code samples in Vulkan       |
+| [vk denoise](https://github.com/nvpro-samples/vk_denoise) | |
 
 ### Books
 
