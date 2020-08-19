@@ -107,7 +107,8 @@ If you find errors in the code, or better way to explain or do things, feel free
 | [Repi blog](http://repi.blogspot.com/) | [Johan Andersson](https://twitter.com/repi) | Graphics programmer at Dice |
 | [Mirror2Mask](https://twitter.com/mirror2mask) | Natalya Tatarchuk | Lead and engineering architect at Bungie |
 | [ID software tiago](https://twitter.com/idsoftwaretiago) | [Tiago Sousa](https://www.linkedin.com/in/tsousa/) | Lead rendering programmer at ID Software |
-| [PataBlog](https://patapom.com/blog/) | [Anoop Ravi Thomas](https://twitter.com/createthematrix) | Senior Graphics Programmer at Rockstar San Diego |
+| [PataBlog](https://patapom.com/blog/) | - | Rendering artisan on Dishonored 2 |
+| [Create the matrix](reatethematrix.blogspot.com) | [Anoop Ravi Thomas](https://twitter.com/createthematrix) | Senior Graphics Programmer at Rockstar San Diego |
 
 ### Videos
 
