@@ -13,14 +13,13 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: |
-          mkdocs build --clean
-          mv site rendering-techniques
+      - run: mkdocs build --clean
 
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          ftp-server: ftp://ftp.cluster023.hosting.ovh.net/
-          ftp-username: guillaumpm
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./rendering-techniques/
+          server: ftp://ftp.cluster023.hosting.ovh.net/
+          username: guillaumpm
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: ./rendering-techniques/
