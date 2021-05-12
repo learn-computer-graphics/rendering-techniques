@@ -1,0 +1,26 @@
+name: ftp-deploy
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: | 
+        mkdocs build --clean
+        mv site rendering-techniques
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.cluster023.hosting.ovh.net/
+          ftp-username: guillaumpm
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./rendering-techniques/
