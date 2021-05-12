@@ -18,7 +18,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp://ftp.cluster023.hosting.ovh.net/
+          server: ftp.cluster023.hosting.ovh.net
           username: guillaumpm
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./site/
