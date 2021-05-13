@@ -6,6 +6,10 @@ Explanation and examples of modern rendering techniques commonly used for game e
 If you are on your phone consider browsing through this <a href="https://rendering-techniques.learn-computer-graphics.com/" target="_blank">link</a> for better performance.
 ```
 
+## About
+
+This website will show and explain multiple usages of the low-level rendering library [The Forge](https://github.com/ConfettiFX/The-Forge). It works in conjunction with the repository [the-forge-samples](https://github.com/learn-computer-graphics/the-forge-samples) which implements said tutorials.
+
 ## 📖 Sources
 
 ### Websites
