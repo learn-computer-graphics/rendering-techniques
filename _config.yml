@@ -1,0 +1,13 @@
+# Book settings
+title: LCG - Rendering Techniques
+author: Learn Computer Graphics team
+logo: logo.png
+
+repository:
+  url: https://github.com/learn-computer-graphics/rendering-techniques
+
+html:
+  favicon : "favicon.ico"
+  use_issues_button: true
+  use_repository_button: true
+  google_analytics_id: 272255575

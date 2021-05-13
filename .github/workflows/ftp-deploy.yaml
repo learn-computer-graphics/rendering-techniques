@@ -8,12 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: mkdocs build --clean
+      - name: Set up Python
+        uses: actions/checkout@v2
+        uses: actions/setup-python@v2
+          with:
+            python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build the book
+        run: jupyter-book build .
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -21,5 +26,5 @@ jobs:
           server: ftp.cluster023.hosting.ovh.net
           username: guillaumpm
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./site/
+          local-dir: ./_build/html/
           server-dir: ./rendering-techniques/
