@@ -4,7 +4,7 @@
 
 ## What is The Forge ?
 
-[The Forge](https://github.com/ConfettiFX/The-Forge) is a cross-platform rendering framework developed by [ConfettiFX](https://theforge.dev/). It's role is to ease the developer's burden when it comes to render things on screen. It is a low-level abstraction layer for the modern Graphic APIs such as [DirectX12](https://en.wikipedia.org/wiki/DirectX) and [Vulkan](https://en.wikipedia.org/wiki/Vulkan_(API)). For accredited developers, it can also support all major game consoles (XBox, PS5, Switch, etc). With The Forge, write once, run (almost) everywhere. 
+[The Forge](https://github.com/ConfettiFX/The-Forge) is a cross-platform rendering framework developed by [ConfettiFX](https://theforge.dev/). It's role is to [ease the developer's burden](https://github.com/ConfettiFX/The-Forge/issues/99) when it comes to render things on screen. It is a low-level abstraction layer for the modern Graphic APIs such as [DirectX12](https://en.wikipedia.org/wiki/DirectX) and [Vulkan](https://en.wikipedia.org/wiki/Vulkan_(API)). For accredited developers, it can also support all major game consoles (Xbox, Playstation 5, Switch, etc). With The Forge, write once, run (almost) everywhere. 
 
 Compared to an in-house project, using this library is the guarantee to have a more stable solution, field tested and with a clear and concise API validated by veteran of the industry.  The first official release was done in 2018, so it's fair to say that the codebase is quite recent. In the few years of development that followed, the maintainers at ConfettiFX added multiple features in the engine related to the work they do as consultants for external game studios.
 
@@ -15,7 +15,7 @@ Compared to an in-house project, using this library is the guarantee to have a m
 | Custom Entity Component System ([ECS](https://github.com/guillaume-haerinck/met-ecs)) | The [ECS](https://docs.unity3d.com/Packages/com.unity.entities@0.16/manual/index.html) programming pattern is a quite recent paradigm which provide a code structure better suited for performance and parallelism. They developed an in-house ECS which can be integrated easily in the rendering engine. |
 | Cross-platform file system                                   | The inclusion of a platform-agnostic standard library to handle filesystem in C++ is recent (v17), so they provide a C-like API which is guarantee to work on any platforms The Forge runs on. |
 | [Micro profiler](https://github.com/ConfettiFX/The-Forge/wiki/Microprofiler---How-to-Use) | One of the main goal of a library like The Forge is performance, so it is crucial to be able to monitor it easily and this is exactly what this tool is for. |
-| [Shader translator](https://github.com/ConfettiFX/The-Forge/wiki/How-to-Use-The-Shader-Translator) | Multiple APIs uses multiple shading languages. With TheForge it is possible to write every shader with a superset of HLSL called FSL, and a translator will take care of translating the FSL to the API in use. |
+| [Global shading language](https://github.com/ConfettiFX/The-Forge/wiki/The-Forge-Shading-Language-(FSL)) | Multiple APIs uses multiple shading languages. With TheForge it is possible to write every shader with a superset of HLSL called FSL, and a translator will take care of translating the FSL to the API in use. |
 | Multi-threaded rendering                                     | One of the goal of the new Graphic API, besides being closer to the metal, is to be suited for multi-threading environments. TheForge keeps this particularity and handle multi-threaded command buffer generation as well as async and multi-threaded resource loading. |
 | [Input handling](https://github.com/ConfettiFX/The-Forge/wiki/Input-System-Overview) | They provide an input-handling API similar to what is available in Unity in C#. |
 | LUA Scripting                                                | It is possible to use basic scripting to animate objects, lights and cameras. |
@@ -33,6 +33,15 @@ ConfettiFX also has closed-source technologies that you can see them [here](http
 | Multiple shadow map generation systems                       | They support [exponential shadow map](https://pixelstoomany.wordpress.com/category/shadows/exponential-shadow-maps/), [adaptive shadow map with parallax correction cache](http://gpuzen.blogspot.com/2019/05/gpu-zen-2-parallax-corrected-cached.html) and [signed distance field soft shadows](http://advances.realtimerendering.com/s2015/DynamicOcclusionWithSignedDistanceFields.pdf) |
 | [Triangle visibility buffer](https://diaryofagraphicsprogrammer.blogspot.com/2018/03/triangle-visibility-buffer.html) | It is a culling techniques used to only render what is necessary |
 | Path tracer                                                  | A real-time raytracing renderer                              |
+
+### Free middleware
+
+With the release 1.48 of the forge, ConfettiFX made available for free some of the [middlewares](https://github.com/ConfettiFX/Custom-Middleware) it sells to game studios.
+
+| Name                                                         | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Aura 3](https://github.com/ConfettiFX/Custom-Middleware/tree/master/Aura) | A global illumination system used in the game [Agents of Mayhem](https://en.wikipedia.org/wiki/Agents_of_Mayhem) |
+| [Ephemeris 2](https://github.com/ConfettiFX/Custom-Middleware/tree/master/Ephemeris) | A skydome system used in the [Spiderman](https://en.wikipedia.org/wiki/Spider-Man_(2018_video_game)) game by Insomniac |
 
 ## Who maintains it ?
 
@@ -72,7 +81,7 @@ The 2.5D game Hades is using TheForge as their rendering engine. They started to
 
 ### [Diligent engine](https://github.com/DiligentGraphics/DiligentEngine)
 
-Developed by [Egor Yusov](https://www.linkedin.com/in/egor-yusov/), previously a software engineer at Intel and Google, this library is thoroughly documented while offering a similar feature-set as TheForge. He provides article on [Gamasutra](https://www.gamasutra.com/blogs/author/EgorYusov/1006649/) about his architecture choice.
+Developed by [Egor Yusov](https://www.linkedin.com/in/egor-yusov/), previously a software engineer at Intel and Google, this library is thoroughly documented while offering a similar feature-set as TheForge. He provides articles on [Gamasutra](https://www.gamasutra.com/blogs/author/EgorYusov/1006649/) about his architecture choice.
 
 ### [Google Filament](https://github.com/google/filament)
 
