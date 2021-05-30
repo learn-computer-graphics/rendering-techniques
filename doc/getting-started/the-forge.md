@@ -22,7 +22,7 @@ Compared to an in-house project, using this library is the guarantee to have a m
 
 ### Some visual features
 
-ConfettiFX also has closed-source technologies that you can see them [here](https://theforge.dev/products/). What's below is available freely in TheForge.
+The support for [Mesh Shaders](https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/) (which are growing to be a game-changer as seen with [Unreal Engine 5 Nanite](https://docs.unrealengine.com/5.0/en-US/RenderingFeatures/Nanite/) renderer) is on its way but [not there yet](https://github.com/ConfettiFX/The-Forge/issues/174).
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

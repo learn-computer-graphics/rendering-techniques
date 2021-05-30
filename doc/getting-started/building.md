@@ -173,7 +173,7 @@ Add the .fls shader files by right clicking on the folder and select Add->Existi
 
 ![add existing](building/add-existing.png)
 
-You can now navigate in your custom folder in the `src` folder and select the files.
+You can now navigate in your custom folder in the `src` folder and select the files. These .fsl stands for Forge Shading Language, which is a superset of DirectX's HLSL that can be transpiled into other shading languages such as .glsl.
 
 ![add shaders](building/add-shaders.png)
 
