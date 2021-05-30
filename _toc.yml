@@ -4,4 +4,4 @@
   chapters:
   - file: doc/getting-started/the-forge
   - file: doc/getting-started/building
-  - file: doc/getting-started/triangle
+  - file: doc/getting-started/api-overview
