@@ -13,7 +13,9 @@ As an open-source project, the community have since created more streamlined ver
 
 ## `Option 1:` Use our custom, simplified project
 
-We provide a repository called [The-Forge-Samples](https://github.com/learn-computer-graphics/the-forge-samples) from which you will find detailed build instruction for your platform. It uses CMake for project generation so you will be able to generate project file for your favorite IDE.
+We provide a repository called <a href="https://github.com/learn-computer-graphics/the-forge-samples" target="_blank">The-Forge-Samples</a> from which you will find detailed build instruction for your platform. It uses CMake for project generation so you will be able to generate project file for your favorite IDE.
+
+> Please note that we have to upgrade this project to the latest version of TheForge, there are only a few API changes
 
 ## `Option 2:` Use the official TheForge repository
 
@@ -23,19 +25,29 @@ We will focus on the Windows platform as it is the most used, but the setup will
 
 ### Prerequisites (Windows)
 
-You need to install [Visual Studio](https://visualstudio.microsoft.com/fr/) and select the C/C++ development package.
+You need to install [Visual Studio](https://visualstudio.microsoft.com/fr/) and select the "Desktop development with C++" package.
 
-Then you can download The-Forge project from their repository. Either as a .zip file or by running `git clone https://github.com/ConfettiFX/The-Forge.git`
+![workload](building/vs-workload.png)
 
-To run the unit test, you have to download the assets used by the examples. To do so simply run the `PRE_BUILD.bat` file.
+Then you can download The-Forge project from <a href="https://github.com/ConfettiFX/The-Forge/releases/tag/v1.48" target="_blank">their repository</a>. Either as a .zip file or by running `git clone https://github.com/ConfettiFX/The-Forge.git`. We tested it with the version 1.48.
 
-Then open the Visual Studio project located in `The-Forge\Examples_3\Unit_Tests\PC Visual Studio 2017\Unit_Tests.sln`. You will probably have a more recent visual studio version, so you will have a popup to upgrade the project. Select yes.
+![download](building/download.png)
 
-In the Project Browser, right click on `Examples\01_Transformations` end set it as startup project.
+To run the unit test, you have to download the assets used by the examples. To do so simply run the `PRE_BUILD.bat` file. Then open the Visual Studio project located in `The-Forge\Examples_3\Unit_Tests\PC Visual Studio 2017\Unit_Tests.sln`. You will probably have a more recent visual studio version, so you will have a popup to upgrade the project. Do not change the settings and press "Ok".
 
-Finally, on the upper window select build config to `DebugDx` and launch the build.
+![retarget](building/retarget.png)
 
-If you have no error, the following window with asteroids should open.
+In the "Solution Explorer" window (if not available, use the top dropdown View->Solution Explorer), right click on `Examples\01_Transformations` and set it as Startup Project.
+
+![startup](building/startup.png)
+
+Finally, on the upper window select build config to `Debug` in `x64` and launch by clicking on "Local Windows Debugger". It will take some time to build.
+
+![launching](building/launch.png)
+
+If everything went well the following window with the animated solar system should open :
+
+![demo](building/demo-01.png)
 
 Now if you want to follow along our tutorial from TheForge official repository there are essentially two ways to go :
 
@@ -47,71 +59,142 @@ Simply remove the content of the .cpp file of an Unit Test of your choice and fo
 
 #### 1. Create a new project
 
-Right click and create new project
+In the Solution Explorer, right click in the Examples folder and click on Add->New Project...
 
-Set the name to DebugDx or file won't be copied
+![new-project](building/new-project.png)
 
-#### 2. Copy resources in local folder
+Select an Empty Project C++ in the templates. You will be able then to set the Project name and its location. It is recommended to put it along the other Unit Tests in the `PC Visual Studio 2017` folder. You can now press Create.
 
-Shaders and GPUCfg in the same folder in src
+![configure](building/project-configure.png)
 
-Add them with add existing files
+Because Visual Studio will create a new folder, and TheForge other samples are in the same folder, we need to manually remove, move and add the project so that it uses the same folder as the other samples (it is possible to do otherwise, but it means that we would need to adapt the path of some commands).
+
+| Step 1 : Remove our custom project     | Step 2 : Close visual studio and move the custom project in the folder above | Step 3 : Open visual studio and add as existing project |
+| -------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| ![step1](building/switch-folder-1.png) | ![step1](building/switch-folder-2.png)                       | ![step1](building/switch-folder-3.png)                  |
+
+#### 2. Add source files
+
+The project is empty, so it is time to add the source files. Right click on the "Source Files" folder of your new project and select "New Item..."
+
+![add sources](building/new-source.png)
+
+Change the location of your new .cpp source file in the `src` folder inside a new folder you have to create
+
+![New source details](building/new-source-detail.png)
+
+Your file will be empty, so you can copy the content of `01_Transformations.cpp` to get started. If you set your project as a startup project and try to build it you will encounter some build errors, either because files or function definition are not found. We need to configure the library links.
 
 #### 3. Link Libraries
 
-In `Configuration Properties/VC++ Directories/Library Directories`
+Right click on your new project and select Properties :
+
+![project properties](building/project-properties.png)
+
+In `Configuration Properties/C/C++/Preprocessor` set the Preprocessor Definitions value to :
 
 ```
-$(SolutionDir)\$(Platform)\$(Configuration);$(LibraryPath)
+USE_MEMORY_TRACKING;_DEBUG;_WINDOWS;VULKAN;DIRECT3D12;DIRECT3D11;%(PreprocessorDefinitions)
 ```
 
-In `Configuration Properties/Linker/Input/Additional Dependencies`
+Select in `Configuration` the All Configurations value.
+
+![all config](building/all-config.png)
+
+In `Configuration Properties/VC++ Directories`. Set Include Directories value to :
 
 ```
-LuaManager.lib;Xinput9_1_0.lib;ws2_32.lib;gainputstatic.lib;RendererDX12.lib;OS.lib;%(AdditionalDependencies)
+$(VULKAN_SDK)\Include;$(IncludePath)
 ```
 
-In `Configuration Properties/Linker/General/Additional Library Directories`
+And the Library Directories value to :
 
 ```
-$(GLFW_DIR)\lib
+$(SolutionDir)\$(Platform)\$(Configuration);$(VULKAN_SDK)\Lib;$(LibraryPath)
 ```
+
+In `Configuration Properties/Linker/Input`. Set the Additional Dependencies value to :
+
+```
+LuaManager.lib;Xinput9_1_0.lib;ws2_32.lib;gainputstatic.lib;Renderer.lib;OS.lib;%(AdditionalDependencies)
+```
+
+Save and exit. Now open the solution properties on right clicking on the Solution 'Unit_Tests' and go to `Common Properties/Project Dependencies`. Select your custom project and check the tickboxes for gainputstatic, LuaManager, OS, Renderer and SpirvTools.
+
+![project-dependencies](building/dependencies.png)
+
+Set your project as startup project and try to build, it should work. If you encounter build error, look at the properties of one of the sample by clicking on the project and compare with you values. If you try to launch the project you will encounter an assert and it will crash. That's because the needed runtime dependencies are not located next to the executable. We will fix this in the next step.
+
+![assert ressource](building/assert-ressource.png)
 
 #### 4. Post-build commands to copy resources to build folder
 
-In `Configuration Properties/Build Events/Post-build Event`
+Open your project option and in `Configuration Properties/Build Events/Post-build Event` in the command line field, click on the bottom arrow, select "<Edit ...>" and paste those lines :
 
 ```bash
-set SHADER_DIR=D3D12
-if $(Configuration) == DebugDx11 set SHADER_DIR=D3D11
-if $(Configuration) == ReleaseDx11 set SHADER_DIR=D3D11
-if $(Configuration) == DebugVk set SHADER_DIR=Vulkan
-if $(Configuration) == ReleaseVk set SHADER_DIR=Vulkan
-
 xcopy /Y /S /D "$(ProjectDir)..\UnitTestResources\Textures\Skybox_*.dds" "$(OutDir)Textures\"
 xcopy /Y /S /D "$(ProjectDir)..\UnitTestResources\Textures\circlepad.dds" "$(OutDir)Textures\"
 xcopy /Y /S /D "$(ProjectDir)..\UnitTestResources\Fonts\*.ttf" "$(OutDir)Fonts\"
 xcopy /Y /S /D "$(ProjectDir)..\UnitTestResources\Fonts\*.otf" "$(OutDir)Fonts\"
-xcopy /Y /S /D "$(ProjectDir)..\..\..\Middleware_3\UI\Shaders\%SHADER_DIR%\*.*" "$(OutDir)Shaders\"
-xcopy /Y /S /D "$(ProjectDir)..\..\..\Middleware_3\Text\Shaders\%SHADER_DIR%\*.*" "$(OutDir)Shaders\"
-xcopy /Y /S /D "$(ProjectDir)..\src\$(ProjectName)\Shaders\%SHADER_DIR%\*.*" "$(OutDir)Shaders\"
+
+xcopy /Y /S /D "$(OutDir)..\OS\Shaders\VULKAN\*.*" "$(OutDir)Shaders\VULKAN\"
+xcopy /Y /S /D "$(OutDir)..\OS\Shaders\DIRECT3D11\*.*" "$(OutDir)Shaders\DIRECT3D11\"
+xcopy /Y /S /D "$(OutDir)..\OS\Shaders\DIRECT3D12\*.*" "$(OutDir)Shaders\DIRECT3D12\"
+
 xcopy /Y /S /D "$(ProjectDir)..\src\$(ProjectName)\GPUCfg\*.*" "$(OutDir)GPUCfg\"
+xcopy /Y /S /D "$(ProjectDir)..\UnitTestResources\Scripts\*.lua" "$(OutDir)Scripts\"
 
 xcopy /Y /D "$(SolutionDir)$(Platform)\$(Configuration)\*.dll" "$(OutDir)"
 ```
 
-Note that the `CompiledShader` folder is created at runtime if shader compiled not found
-
-#### 5. Set project build order
-
-With dependencies on master project properties
+Then in `Configuration Properties/General` set the Output directory to :
 
 ```
-With a community CMakegainputstatic
-LuaManager
-OS
-RendererDX11
-RendererDX12
-RendererVulkan
+$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\
 ```
 
+And the Intermediate Directory to :
+
+```
+$(SolutionDir)\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\
+```
+
+Now you can build and run. There will be another assertion triggered, this time it is because the shader files specific for this project are not found.
+
+![no-shaders](building/assert-shader.png)
+
+#### 5. Add the shaders
+
+Open your file explorer and copy the `GPUCfg` and `Shaders` folders located in `Examples_3/Unit_Tests/src/01_Transformations` into your custom folder in `src`. Then you can add it to Visual Studio, to do so, start by creating a new virtual folder by right clicking on your custom project and select Add->New filter, and name it Shaders.
+
+![new filder](building/new-filter.png)
+
+Add the .fls shader files by right clicking on the folder and select Add->Existing Item...
+
+![add existing](building/add-existing.png)
+
+You can now navigate in your custom folder in the `src` folder and select the files.
+
+![add shaders](building/add-shaders.png)
+
+You now have to allow visual studio to recognize these file extensions. Close visual studio and open your `MY_CUSTOM_PROJECT.vcxproj` and add right after the line `<ImportGroup Label="ExtensionTargets">` located towards the end this line :
+
+```xml
+<Import Project="..\..\..\Common_3\Tools\ForgeShadingLanguage\VS\fsl.targets" />
+```
+
+You can save, open visual studio and open the properties of all of your shader files.
+
+![shader properties](building/shader-properties.png)
+
+ As their Item Type, you can now set FSLShader.
+
+![fsl shader](building/fsl-shader.png)
+
+If you press Apply you will see that a new tab called FSLShader is available, click on it and set the `Language ` value to `VULKAN DIRECT3D11 DIRECT3D12`, the `OutDir` value to `$(OutDir)/Shaders/` and finally the `BinaryOutDir` value to `$(OutDir)/Shaders/Binary`. Save and exit the window.
+
+![fsl shader setup](building/fsl-shader-setup.png)
+
+If you build again and launch, everything should work properly and you should see the same scene as the first UnitTest. Great ! Know that you know how to setup a project from scratch, you can change it to the way you want and follow the tutorials this way, Good luck !
+
+![demo](building/demo-01.png)
