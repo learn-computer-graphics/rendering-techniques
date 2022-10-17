@@ -1,6 +1,7 @@
-- file: index.md
-
-- part: Getting started
+format: jb-book
+root: index
+parts:
+- caption: Getting started
   chapters:
   - file: doc/getting-started/the-forge
   - file: doc/getting-started/building

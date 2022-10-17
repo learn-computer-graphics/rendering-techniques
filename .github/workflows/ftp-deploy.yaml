@@ -8,12 +8,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: 3.x
+        python-version: '3.7'
+        cache: 'pip' # caching pip dependencies
+
+    - name: Install pip wheel
+      run: pip install wheel
 
     - name: Install dependencies
       run: pip install -r requirements.txt
@@ -22,7 +26,7 @@ jobs:
       run: jupyter-book build .
 
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: ftp.cluster023.hosting.ovh.net
         username: guillaumpm

@@ -9,3 +9,7 @@ Our content is [viewable on our blog](https://learn-computer-graphics.com/render
 ## 👨‍👩‍👦‍👦 Contributing
 
 If you find errors in the code, or better way to explain or do things, feel free to open an issue !
+
+## How to build
+
+Need to install python. Then move inside the repository folder and run `pip install -r requirements.txt`. Finally, build the book by running `jupyter-book build .`
