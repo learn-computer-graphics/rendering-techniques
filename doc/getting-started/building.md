@@ -1,13 +1,13 @@
 # Building TheForge
 
-ConfettiFX provides IDE project files for each of the platforms it supports. These are located in [`Examples_3/Unit_Tests/YOUR_PLATFORM`](https://github.com/ConfettiFX/The-Forge/tree/master/Examples_3/Unit_Tests). For free we have access to (other platforms are only available for accredited developers) :
+ConfettiFX provides IDE project files for each of the platforms it supports. These are located in  <a href='https://github.com/ConfettiFX/The-Forge/tree/master/Examples_3/Unit_Tests' target='_blank'>`Examples_3/Unit_Tests/YOUR_PLATFORM`</a>. For free we have access to (other platforms are only available for accredited developers) :
 
 - XCode for MacOS
-- Visual Studio 2017 for Android ([can be upgraded to 2019 on open](https://github.com/ConfettiFX/The-Forge/issues/137))
-- Visual Studio 2017 for Windows ([can be upgraded to 2019 on open](https://github.com/ConfettiFX/The-Forge/issues/137))
+- Visual Studio 2017 for Android ( <a href='https://github.com/ConfettiFX/The-Forge/issues/137' target='_blank'>can be upgraded to 2019 on open</a>)
+- Visual Studio 2017 for Windows ( <a href='https://github.com/ConfettiFX/The-Forge/issues/137' target='_blank'>can be upgraded to 2019 on open</a>)
 - Codeline for Linux
 
-The project do not officially support project generator tools such as [CMake](https://cmake.org/), [Premake](https://premake.github.io/) or even [Sharpmake](https://github.com/ubisoft/Sharpmake), which means that it can be cumberstone to create a new project or integrate the library into your pipeline.
+The project do not officially support project generator tools such as  <a href='https://cmake.org/' target='_blank'>CMake</a>,  <a href='https://premake.github.io/' target='_blank'>Premake</a> or even  <a href='https://github.com/ubisoft/Sharpmake' target='_blank'>Sharpmake</a>, which means that it can be cumberstone to create a new project or integrate the library into your pipeline.
 
 As an open-source project, the community have since created more streamlined version of the library to use standard project generation. You have the multiple choice to build our samples :
 
@@ -25,7 +25,7 @@ We will focus on the Windows platform as it is the most used, but the setup will
 
 ### Prerequisites (Windows)
 
-You need to install [Visual Studio](https://visualstudio.microsoft.com/fr/) and select the "Desktop development with C++" package.
+You need to install  <a href='https://visualstudio.microsoft.com/fr/' target='_blank'>Visual Studio</a> and select the "Desktop development with C++" package.
 
 ![workload](building/vs-workload.png)
 
